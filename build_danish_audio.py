@@ -61,8 +61,9 @@ async def main() -> None:
     if len(chapters) != 18:
         raise SystemExit(f"Forventede 18 kapitler, fandt {len(chapters)}.")
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    for number, chapter in enumerate(chapters, 1):
-        await generate_one(chapter, number)
+    jobs = [generate_one(chapter, number) for number, chapter in enumerate(chapters, 1)]
+    for start in range(0, len(jobs), 4):
+        await asyncio.gather(*jobs[start:start + 4])
     (OUTPUT / "ready.js").write_text("window.DANISH_STUDIO_AUDIO = true;\n", encoding="utf-8")
 
 

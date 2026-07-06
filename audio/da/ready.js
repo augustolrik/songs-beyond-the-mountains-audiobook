@@ -1,1 +1,1 @@
-window.DANISH_STUDIO_AUDIO = false;
+window.DANISH_STUDIO_AUDIO = true;
