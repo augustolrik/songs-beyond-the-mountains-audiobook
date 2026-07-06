@@ -1,0 +1,47 @@
+:root { --ink:#f8f4e8; --muted:#c5c0b3; --panel:#314234; --accent:#e1b978; --line:#61705f; --page:#3b3022; --field:#253429; }
+body[data-theme="dark"] { color-scheme:dark; --ink:#f3eedf; --muted:#b7b5a9; --panel:#223128; --accent:#e0a95b; --line:#405247; --page:#111a15; --field:#142019; }
+body[data-theme="light"] { color-scheme:light; --ink:#171a18; --muted:#5d635f; --panel:#ffffff; --accent:#76522a; --line:#cbc9c0; --page:#f4f2ec; --field:#faf9f5; }
+body[data-theme="cody"] { color-scheme:dark; --ink:#fffdf5; --muted:#d8d1bf; --panel:#314234; --accent:#f0c982; --line:#687863; --page:#3b3022; --field:#26372b; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; background:radial-gradient(circle at 80% 0,color-mix(in srgb,var(--panel) 72%,transparent) 0,transparent 38%),var(--page); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; transition:background .2s,color .2s; }
+main { width:min(720px,100%); margin:auto; padding:calc(24px + env(safe-area-inset-top)) 18px calc(36px + env(safe-area-inset-bottom)); }
+header { padding:24px 6px 28px; }
+.eyebrow { color:var(--accent); letter-spacing:.22em; font-size:.72rem; font-weight:800; margin:0 0 12px; }
+h1 { font-family:Georgia,serif; font-size:clamp(2.5rem,12vw,4.7rem); font-weight:500; line-height:.92; letter-spacing:-.04em; margin:0; }
+.subtitle { color:var(--muted); max-width:34rem; line-height:1.5; }
+.player,.library-controls { background:var(--panel); border:1px solid var(--line); border-radius:24px; padding:20px; box-shadow:0 20px 70px #0004; }
+.library-controls { margin-bottom:14px; }
+.toolbar-row { display:flex; align-items:end; justify-content:space-between; gap:14px; }
+.segmented { display:flex; border:1px solid var(--line); padding:3px; border-radius:13px; background:var(--field); }
+.segmented button { padding:10px 15px; border-radius:9px; font:700 .85rem system-ui; color:var(--muted); }
+.segmented button.active { color:var(--page); background:var(--accent); }
+.theme-picker { flex:1; max-width:190px; }
+.theme-picker select { margin-bottom:0; }
+label,.progress-copy { color:var(--muted); font-size:.78rem; font-weight:700; letter-spacing:.04em; }
+.progress-copy { display:flex; justify-content:space-between; }
+input[type=range] { width:100%; accent-color:var(--accent); margin:10px 0 18px; }
+select { width:100%; padding:12px; margin:7px 0 15px; border:1px solid var(--line); border-radius:12px; background:var(--field); color:var(--ink); font:inherit; }
+.now-reading { min-height:145px; padding:16px 4px 10px; }
+#chapterTitle { color:var(--accent); font:600 1.05rem Georgia,serif; }
+#paragraphText { color:#e8e4d9; font:1.05rem/1.62 Georgia,serif; display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden; }
+.transport { display:flex; align-items:center; justify-content:center; gap:28px; margin:12px 0 24px; }
+button { border:0; color:var(--ink); background:transparent; cursor:pointer; }
+.play { width:78px; height:78px; border-radius:50%; background:var(--accent); color:#172017; font-size:2rem; box-shadow:0 8px 30px #0008; }
+.small { font-size:1.55rem; min-width:56px; }
+.small span { display:block; color:var(--muted); font-size:.68rem; margin-top:4px; }
+.settings-grid output { float:right; color:var(--ink); }
+.status { margin:8px 0 0; color:var(--muted); font-size:.78rem; text-align:center; }
+details { border-bottom:1px solid var(--line); padding:22px 6px; }
+summary { cursor:pointer; font-weight:700; }
+#chapterList { padding-left:26px; }
+#chapterList button { width:100%; text-align:left; padding:10px 2px; font:inherit; color:var(--muted); }
+#chapterList button.current { color:var(--accent); }
+footer { color:var(--muted); font-size:.75rem; text-align:center; padding:24px; }
+.reader { display:none; margin-top:14px; background:var(--panel); border:1px solid var(--line); border-radius:24px; padding:clamp(22px,6vw,52px); box-shadow:0 20px 70px #0004; }
+.reader h2 { font:500 clamp(1.8rem,7vw,3rem)/1.1 Georgia,serif; margin:.25em 0 1em; }
+#readerText { font:clamp(1.05rem,3vw,1.25rem)/1.72 Georgia,serif; max-width:42rem; }
+#readerText p { margin:0 0 1.15em; }
+body[data-mode="read"] .listen-only { display:none !important; }
+body[data-mode="read"] .reader { display:block; }
+body[data-mode="read"] .player { padding-bottom:12px; }
+@media (max-width:420px) { .player{padding:16px}.transport{gap:18px}.now-reading{min-height:165px} }

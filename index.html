@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17231d">
+  <title>Songs Beyond the Mountains</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css?v=9">
+</head>
+<body data-theme="cody" data-mode="listen">
+  <main>
+    <header>
+      <p class="eyebrow" id="eyebrow">AUDIOBOOK</p>
+      <h1 id="bookTitle">Songs Beyond<br>the Mountains</h1>
+      <p class="subtitle" id="bookSubtitle">A goblin envoy, a hidden valley, and a song no one can own.</p>
+    </header>
+
+    <section class="library-controls" aria-label="Boghylde">
+      <label for="bookSelect" id="bookLabel">Bog</label>
+      <select id="bookSelect"></select>
+      <div class="toolbar-row">
+        <div class="segmented" aria-label="Tilstand">
+          <button id="listenMode" class="active" type="button">🎧 Lyt</button>
+          <button id="readMode" type="button">📖 Læs</button>
+        </div>
+        <label class="theme-picker" for="themeSelect"><span id="themeLabel">Tema</span>
+          <select id="themeSelect">
+            <option value="light">Sort/hvid</option>
+            <option value="dark">Mørk</option>
+            <option value="cody">Cody</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="player" aria-label="Audiobook player">
+      <div class="progress-copy listen-only">
+        <span id="actLabel">Act I</span>
+        <span id="percentLabel">0%</span>
+      </div>
+      <input id="progress" class="listen-only" type="range" min="0" max="1000" value="0" aria-label="Chapter progress">
+
+      <label for="languageSelect" id="languageLabel">Language</label>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="da">Dansk</option>
+      </select>
+
+      <label for="chapterSelect" id="chapterLabel">Chapter</label>
+      <select id="chapterSelect"></select>
+
+      <div class="now-reading listen-only">
+        <p id="chapterTitle">Loading…</p>
+        <p id="paragraphText"></p>
+      </div>
+      <audio id="chapterAudio" preload="metadata"></audio>
+
+      <div class="transport listen-only">
+        <button id="previous" class="small" aria-label="Previous paragraph">↶<span>Back</span></button>
+        <button id="play" class="play" aria-label="Play">▶</button>
+        <button id="next" class="small" aria-label="Next paragraph">↷<span>Next</span></button>
+      </div>
+
+      <div class="settings-grid listen-only">
+        <label for="rate">Speed <output id="rateValue">1.00×</output></label>
+        <input id="rate" type="range" min="0.7" max="1.5" step="0.05" value="1">
+        <label for="voiceSelect">Voice</label>
+        <select id="voiceSelect"></select>
+      </div>
+
+      <p id="status" class="status" aria-live="polite">Your place is saved automatically.</p>
+    </section>
+
+    <article id="reader" class="reader" aria-label="Læsetilstand">
+      <p id="readerAct" class="eyebrow"></p>
+      <h2 id="readerTitle"></h2>
+      <div id="readerText"></div>
+    </article>
+
+    <details>
+      <summary>Chapters</summary>
+      <ol id="chapterList"></ol>
+    </details>
+
+    <footer>
+      <p id="footerText">Playback uses your device’s built-in voices. Headphones recommended.</p>
+    </footer>
+  </main>
+  <script src="chapters-data.js?v=9"></script>
+  <script src="chapters-data-da.js?v=9"></script>
+  <script src="audio/da/ready.js?v=9"></script>
+  <script src="audio/en/ready.js?v=10"></script>
+  <script src="library-data.js?v=10"></script>
+  <script src="app.js?v=10" defer></script>
+</body>
+</html>

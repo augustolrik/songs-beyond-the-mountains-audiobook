@@ -1,0 +1,9 @@
+{
+  "name": "Songs Beyond the Mountains / Sange hinsides bjergene",
+  "short_name": "Bjergenes sange",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#111a15",
+  "theme_color": "#17231d",
+  "description": "Offline English and Danish audiobook player with resumable playback"
+}
