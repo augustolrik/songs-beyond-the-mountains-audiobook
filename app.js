@@ -136,9 +136,9 @@ function populateVoices() {
   select.disabled = false;
   const book = currentBook();
   if (state.language === 'en') {
-    if (book.studioAudio.microsoftUk) select.add(new Option('Microsoft Sonia - British audiobook', 'studio:microsoftUk'));
-    if (book.studioAudio.googleUk) select.add(new Option('Google UK - British audiobook', 'studio:googleUk'));
-  } else if (book.studioAudio.da) {
+    if (book.studioAudio?.microsoftUk) select.add(new Option('Microsoft Sonia - British audiobook', 'studio:microsoftUk'));
+    if (book.studioAudio?.googleUk) select.add(new Option('Google UK - British audiobook', 'studio:googleUk'));
+  } else if (book.studioAudio?.da) {
     select.add(new Option('Christel Neural - indlæst lydbog', 'studio:da'));
   }
   voices.forEach(v => select.add(new Option(`${v.name} (${v.lang})`, v.voiceURI)));
@@ -172,6 +172,8 @@ function populateBooks() {
 
 function applyPresentation() {
   document.body.dataset.theme = state.theme;
+  if (currentBook()?.readOnly) state.mode = 'read';
+  document.body.dataset.readonly = currentBook()?.readOnly ? 'true' : 'false';
   document.body.dataset.mode = state.mode;
   $('themeSelect').value = state.theme;
   $('listenMode').classList.toggle('active', state.mode === 'listen');
@@ -182,6 +184,7 @@ function applyPresentation() {
 
 function applyLanguage() {
   const book = currentBook();
+  if (book.readOnly) state.language = 'en';
   state.chapters = book.chapters[state.language] || book.chapters.en;
   const positionKey = `${state.book}-${state.language}`;
   const position = state.positions[positionKey] || state.positions[state.language] || { chapter: 0, paragraph: 0 };

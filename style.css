@@ -56,3 +56,6 @@ body[data-mode="read"] .listen-only { display:none !important; }
 body[data-mode="read"] .reader { display:block; }
 body[data-mode="read"] .player { padding-bottom:12px; }
 @media (max-width:420px) { .player{padding:16px}.transport{gap:18px}.now-reading{min-height:165px} }
+
+body[data-readonly="true"] #listenMode { display:none; }
+body[data-readonly="true"] .player { padding-bottom:12px; }
