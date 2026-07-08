@@ -1,4 +1,4 @@
-# Songs Beyond the Mountains - D&D Campaign Guide
+﻿# Songs Beyond the Mountains - D&D Campaign Guide
 
 This guide turns the novel material into a tabletop campaign framework. It is written so a Dungeon Master can run the setting before, during, after, or beside the events of the book without needing to copy the novel scene by scene.
 
@@ -35,6 +35,102 @@ Start with border rumors and low-level road work. Build toward the Black Banner,
 Levels 8-12.
 
 Set after the treaty. The valley is known, echo-iron is forbidden, Merrow's allies still have money, and other powers want the mountain's stored voices.
+
+
+## Graphical overview of the novel for DMs
+
+Use this section when you need the whole story shape quickly before planning a session.
+
+![Pixel art overview of Kettlehome, Rivergate, Vaerith, the Black Banner, and the echo-iron caves](assets/songs-beyond-pixel-overview.png)
+
+### Act flow
+
+```text
+ACT I - THE ENVOY
+Kettlehome opens a road outward
+        |
+        v
+Gobolin reaches Rivergate under suspicion
+        |
+        v
+Road attacks look like goblin raids
+        |
+        v
+First truth: the evidence is staged
+
+ACT II - THE BROKEN ACCORD
+Burned caravans and wrong knots
+        |
+        v
+Black Banner is real, but manipulated
+        |
+        v
+Merrow's money points toward hidden mining
+        |
+        v
+Vaerith admits echo-iron exists beneath Kettlehome
+        |
+        v
+The college is attacked and witnesses are taken
+
+ACT III - SONGS BEYOND THE MOUNTAINS
+Kettlehome must choose secrecy or open risk
+        |
+        v
+Ruk and the Banner demand land and safety
+        |
+        v
+Merrow binds Vaerith with echo-iron and repeated song-magic
+        |
+        v
+Many voices break the single controlling pattern
+        |
+        v
+The treaty at dawn creates an imperfect peace
+```
+
+### Faction pressure map
+
+```text
+                         VAERITH
+              protects Kettlehome, hides echo-iron
+                            |
+                            v
+KETTLEHOME  ---- wants recognition ----  RIVERGATE
+ hidden goblin valley                     walled trade city
+ wants safety + consent                   wants safe roads + law
+        |                                      |
+        |                                      v
+        |                              LADY MERROW
+        |                     wants control of echo-iron
+        |                     uses fear, ledgers, staged raids
+        v                                      |
+BLACK BANNER <---- tools, promises, betrayal --+
+displaced goblin families
+want land, papers, and safety
+```
+
+### Session-path overview
+
+| Story stage | What the players investigate | What changes if they succeed |
+|---|---|---|
+| Road trouble | Burned wagons, wrong knots, staged signs | The party learns the raids are being composed as a false story |
+| Rivergate pressure | Council politics, warehouses, customs copies | Merrow becomes a suspect, but evidence must be strong |
+| Banner truth | Ruk, Mother Tekk, displaced families | The enemy faction becomes a possible treaty partner |
+| Kettlehome truth | Vaerith, Sella, hidden valley law | Protection is revealed as both safety and control |
+| Echo-iron danger | College notes, resonance, binding names | The magical resource becomes the real prize |
+| Final crisis | Listening caves, many voices, Merrow's binding | Peace becomes possible only if no single faction owns the story |
+
+### DM shortcut
+
+If the players are lost, put one of these visual anchors in front of them:
+
+- A wrong Kettlehome knot on a burned wagon.
+- A pearl button from Merrow's black glove in the mud.
+- A Black Banner ration slate listing children and elders, not just fighters.
+- A copper raven repeating a private sentence.
+- An echo-iron vein repeating the last word spoken near it.
+- A treaty draft where every faction hates one clause and needs another.
 
 ## Core Premise for Player Characters
 
@@ -885,4 +981,5 @@ You do not need to preserve the novel's exact sequence. Preserve the pressure:
 - The best solution requires many voices instead of one perfect hero.
 
 If the player characters replace novel characters, keep the original cast as witnesses, rivals, patrons, and consequences. If the player characters travel beside the novel characters, make sure the players decide the hard parts: who to trust, what to reveal, whom to forgive, and what peace costs.
+
 
