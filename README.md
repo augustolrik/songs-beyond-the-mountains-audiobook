@@ -1,8 +1,15 @@
 # Phone Audiobook Player
 
+Homepage: https://augustolrik.github.io/songs-beyond-the-mountains-audiobook/
+
 This player uses the phone or browser's built-in English voices. It remembers the current chapter, paragraph, speed, and selected voice in local storage.
 
 The complete novel is included in both English and Danish. Use the **Language / Sprog** menu in the player. Each language keeps its own listening position, and the Danish edition automatically prioritizes an installed `da-DK` voice.
+
+The homepage also links to two reading-only files with no audio playback:
+
+- D&D Campaign Guide
+- The Wolves of Langston choose-your-own-adventure mystery
 
 ## Offline on this computer — recommended
 
