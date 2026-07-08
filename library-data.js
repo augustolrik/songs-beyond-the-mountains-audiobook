@@ -20,26 +20,20 @@ window.AUDIOBOOK_LIBRARY = [
   },
   {
     id: 'songs-beyond-mountains-dnd-guide',
-    title: { en: 'D&D Campaign Guide (no audio)', da: 'D&D Campaign Guide (no audio)' },
+    title: { en: 'D&D Campaign Guide (opens document)', da: 'D&D Campaign Guide (opens document)' },
     subtitle: {
       en: 'Plot hooks, motives, factions, locations, echo-iron, and campaign endings.',
       da: 'Plot hooks, motives, factions, locations, echo-iron, and campaign endings.'
     },
-    chapters: { en: window.DND_CAMPAIGN_GUIDE_CHAPTERS },
-    studioAudio: {},
-    audioPath: {},
-    readOnly: true
+    targetUrl: 'extras/songs-beyond-the-mountains-dnd-campaign-guide.html'
   },
   {
-    id: 'wolves-langston-cyoa',
-    title: { en: 'The Wolves of Langston - Choose Your Own Adventure (no audio)', da: 'The Wolves of Langston - Choose Your Own Adventure (no audio)' },
+    id: 'songs-beyond-mountains-cyoa',
+    title: { en: 'Songs Beyond the Mountains - Choose Your Own Adventure (opens document)', da: 'Songs Beyond the Mountains - Choose Your Own Adventure (opens document)' },
     subtitle: {
-      en: 'A branching mystery adventure with multiple non-random endings.',
-      da: 'A branching mystery adventure with multiple non-random endings.'
+      en: 'A branching mystery in the setting of Songs Beyond the Mountains.',
+      da: 'A branching mystery in the setting of Songs Beyond the Mountains.'
     },
-    chapters: { en: window.WOLVES_LANGSTON_CYOA_CHAPTERS },
-    studioAudio: {},
-    audioPath: {},
-    readOnly: true
+    targetUrl: 'extras/songs-beyond-the-mountains-choose-your-own-adventure.html'
   }
 ];

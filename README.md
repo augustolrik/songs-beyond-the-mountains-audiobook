@@ -9,7 +9,7 @@ The complete novel is included in both English and Danish. Use the **Language / 
 The homepage also links to two reading-only files with no audio playback:
 
 - D&D Campaign Guide
-- The Wolves of Langston choose-your-own-adventure mystery
+- Songs Beyond the Mountains choose-your-own-adventure mystery
 
 ## Offline on this computer — recommended
 

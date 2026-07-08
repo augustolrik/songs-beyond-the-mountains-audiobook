@@ -166,14 +166,13 @@ function populateBooks() {
   const select = $('bookSelect');
   select.innerHTML = '';
   window.AUDIOBOOK_LIBRARY.forEach(book => select.add(new Option(book.title[state.language] || book.title.en, book.id)));
+  [...select.options].forEach(option => { const book = window.AUDIOBOOK_LIBRARY.find(item => item.id === option.value); if (book?.targetUrl) option.dataset.targetUrl = book.targetUrl; });
   if (!window.AUDIOBOOK_LIBRARY.some(book => book.id === state.book)) state.book = window.AUDIOBOOK_LIBRARY[0].id;
   select.value = state.book;
 }
 
 function applyPresentation() {
   document.body.dataset.theme = state.theme;
-  if (currentBook()?.readOnly) state.mode = 'read';
-  document.body.dataset.readonly = currentBook()?.readOnly ? 'true' : 'false';
   document.body.dataset.mode = state.mode;
   $('themeSelect').value = state.theme;
   $('listenMode').classList.toggle('active', state.mode === 'listen');
@@ -184,7 +183,6 @@ function applyPresentation() {
 
 function applyLanguage() {
   const book = currentBook();
-  if (book.readOnly) state.language = 'en';
   state.chapters = book.chapters[state.language] || book.chapters.en;
   const positionKey = `${state.book}-${state.language}`;
   const position = state.positions[positionKey] || state.positions[state.language] || { chapter: 0, paragraph: 0 };
@@ -210,6 +208,7 @@ function applyLanguage() {
 
 async function init() {
   restore();
+  if (currentBook()?.targetUrl) state.book = (window.AUDIOBOOK_LIBRARY || [])[0]?.id || 'songs-beyond-mountains';
   if (!Array.isArray(window.AUDIOBOOK_CHAPTERS)) {
     const response = await fetch('chapters.json');
     window.AUDIOBOOK_CHAPTERS = await response.json();
@@ -236,7 +235,11 @@ async function init() {
     prepareStudioAudio(); save();
   };
   $('languageSelect').onchange = e => { stop(); save(); state.language = e.target.value; applyLanguage(); };
-  $('bookSelect').onchange = e => { stop(); save(); state.book = e.target.value; applyLanguage(); };
+  $('bookSelect').onchange = e => {
+    const book = (window.AUDIOBOOK_LIBRARY || []).find(item => item.id === e.target.value);
+    if (book?.targetUrl) { window.location.href = book.targetUrl; return; }
+    stop(); save(); state.book = e.target.value; applyLanguage();
+  };
   $('themeSelect').onchange = e => { state.theme = e.target.value; applyPresentation(); };
   $('listenMode').onclick = () => { state.mode = 'listen'; applyPresentation(); };
   $('readMode').onclick = () => { state.mode = 'read'; applyPresentation(); };

@@ -57,5 +57,9 @@ body[data-mode="read"] .reader { display:block; }
 body[data-mode="read"] .player { padding-bottom:12px; }
 @media (max-width:420px) { .player{padding:16px}.transport{gap:18px}.now-reading{min-height:165px} }
 
-body[data-readonly="true"] #listenMode { display:none; }
-body[data-readonly="true"] .player { padding-bottom:12px; }
+.doc-toc { border:1px solid var(--line); border-radius:18px; padding:16px 18px; margin-bottom:26px; background:var(--field); }
+.doc-toc h2 { margin-top:0; font:600 1.3rem Georgia,serif; }
+.doc-toc a { color:var(--accent); text-decoration:none; }
+.doc-toc li { margin:.35em 0; }
+.doc-page h2 { color:var(--accent); margin-top:1.6em; }
+.doc-page h3 { margin-top:1.25em; }
