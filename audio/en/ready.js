@@ -1,1 +1,1 @@
-window.ENGLISH_STUDIO_AUDIO = { microsoftUk: true, googleUk: true };
+window.ENGLISH_STUDIO_AUDIO = { microsoftUk: true, googleUk: false };
